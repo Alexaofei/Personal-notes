@@ -35,7 +35,7 @@ XMLHttpRequest 对象用于在后台与服务器交换数据。
 #### XMLHttpRequest对象属性
 ##### readyState
 表示XMLHttpRequest对象的状态：0：未初始化。对象已创建，未调用open；
-1. open方法成功调用，但sendd方法未调用；
+1. open方法成功调用，但send方法未调用；
 2. send方法已经调用，尚未开始接受数据；
 3. 正在接受数据。Http响应头信息已经接受，但尚未接收完成；
 4. 完成，即响应数据接受完成。
