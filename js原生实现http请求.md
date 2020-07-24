@@ -35,12 +35,12 @@ XMLHttpRequest 对象用于在后台与服务器交换数据。
 #### XMLHttpRequest对象属性
 ##### readyState
 表示XMLHttpRequest对象的状态：0：未初始化。对象已创建，未调用open；
-1. Open方法成功调用，但Send方法未调用；
-2. Send方法已经调用，尚未开始接受数据；
+1. open方法成功调用，但send方法未调用；
+2. send方法已经调用，尚未开始接受数据；
 3. 正在接受数据。Http响应头信息已经接受，但尚未接收完成；
 4. 完成，即响应数据接受完成。
 
-##### Onreadystatechange
+##### onreadystatechange
 请求状态改变的事件触发器（readyState变化时会调用这个属性上注册的javascript函数）。
 
 ##### responseText
@@ -59,12 +59,12 @@ XMLHttpRequest 对象用于在后台与服务器交换数据。
 
 | 方法|     说明 |
 | :-------- | :--------|
-| Open(string method,string url,boolean asynch,String username,string password)   |   指定和服务器端交的HTTP方法，URL地址，即其他请求信息；Method:表示http请求方法，一般使用"GET","POST".url：表示请求的服务器的地址；asynch：表示是否采用异步方法，true为异步，false为同步；后边两个可以不指定，username和password分别表示用户名和密码，提供http认证机制需要的用户名和密码。 | 
-| Send(content)   |   向服务器发出请求，如果采用异步方式，该方法会立即返回。content可以指定为null表示不发送数据，其内容可以是DOM对象，输入流或字符串。 | 
-| SetRequestHeader(String header,String Value)   |   设置HTTP请求中的指定头部header的值为value。此方法需在open方法以后调用，一般在post方式中使用。 | 
+| open(string method,string url,boolean asynch,String username,string password)   |   指定和服务器端交的HTTP方法，URL地址，即其他请求信息；Method:表示http请求方法，一般使用"GET","POST".url：表示请求的服务器的地址；asynch：表示是否采用异步方法，true为异步，false为同步；后边两个可以不指定，username和password分别表示用户名和密码，提供http认证机制需要的用户名和密码。 | 
+| send(content)   |   向服务器发出请求，如果采用异步方式，该方法会立即返回。content可以指定为null表示不发送数据，其内容可以是DOM对象，输入流或字符串。 | 
+| setRequestHeader(String header,String Value)   |   设置HTTP请求中的指定头部header的值为value。此方法需在open方法以后调用，一般在post方式中使用。 | 
 | getAllResponseHeaders()   |   返回包含Http的所有响应头信息，其中相应头包括Content-length,date,uri等内容。返回值是一个字符串，包含所有头信息，其中每个键名和键值用冒号分开，每一组键之间用CR和LF（回车加换行符）来分隔！ | 
 | getResponseHeader(String header)   |   返回HTTP响应头中指定的键名header对应的值 | 
-| Abort()   |   停止当前http请求。对应的XMLHttpRequest对象会复位到未初始化的状态。 | 
+| abort()   |   停止当前http请求。对应的XMLHttpRequest对象会复位到未初始化的状态。 | 
 
 #### 实例
 
